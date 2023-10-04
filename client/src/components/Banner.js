@@ -74,21 +74,33 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    I build software, and find pure bliss in the digital sandbox
-                    of coding. Software development is an art form, a bridge
-                    between imagination and reality, constructured with elegant
-                    and functional solutions. With a strong foundation in
-                    backend development, growing experience in frontend
-                    development, and knowledge in many computer science
-                    specializations, I walk that bridge daily. Whether I'm
-                    crafting a sleek web application or optimizing hidden
-                    algorithms, I'm fueled by the drive to learn and create
-                    something extraordinary.
+                    I build software, and find bliss playing in the digital
+                    sandbox know as code. Software development is an art form, a
+                    bridge between imagination and reality, constructed with
+                    elegant and functional solutions. With a strong foundation
+                    in <b className="bolded">backend development</b> and growing
+                    expertise in <b className="bolded">frontend design</b>, I
+                    traverse that bridge often.
                   </p>
                   <p>
-                    When I'm not lost in the world of code, I'm often exploring
-                    and creating art, reading novels, deepening my sense of
-                    fashion, or exploring virtual worlds.
+                    <b className="bolded">
+                      From crafting sleek web applications to simulating human
+                      emotion with the power of language models
+                    </b>
+                    , I follow my passion of experiencing, learning, and
+                    creating.
+                  </p>
+                  <p>
+                    Beyond the realm of software development, I seek expression
+                    in other areas. Whether it's exploring our world, creating
+                    and appreciating visual art, getting lost in novels,
+                    refining my fashion, or adventuring in virtual universes,
+                    I'm always finding beauty in this one life we have.
+                  </p>
+                  <p>
+                    <b className="bolded">Let's connect</b> and appreciate the
+                    synergy of art and technology. Together, we can leave a
+                    positive mark on this evolving digital landscape.
                   </p>
                   {/*
                   <button
