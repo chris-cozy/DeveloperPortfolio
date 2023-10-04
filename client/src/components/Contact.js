@@ -39,7 +39,7 @@ export const Contact = () => {
     let result = response.json();
     setFormDetails(formInitialDetails);
 
-    if (result.code == 200) {
+    if (result.code === 200) {
       setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({

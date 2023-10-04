@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MouseTracker.css"; // Import the CSS file for styling
 
 export const MouseTracker = () => {
