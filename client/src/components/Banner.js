@@ -6,8 +6,6 @@ import TrackVisibility from "react-on-screen";
 import "./Banner.css";
 
 export const Banner = () => {
-  // Animation Setup
-  const toRotate = ["Software Engineer", "Web Developer", "Game Developer"];
   // Index of rotate array
   const [loopNum, setLoopNum] = useState(0);
   // Is deleting word
@@ -18,6 +16,8 @@ export const Banner = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
+    const toRotate = ["Software Engineer", "Web Developer", "Game Developer"];
+
     const tick = () => {
       let i = loopNum % toRotate.length;
       let fullText = toRotate[i];
@@ -50,7 +50,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta, loopNum, isDeleting, toRotate]);
+  }, [text, delta, loopNum, isDeleting]);
 
   return (
     <section className="banner" id="about">
