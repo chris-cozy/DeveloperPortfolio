@@ -17,16 +17,6 @@ export const Banner = () => {
   // Current typed text
   const [text, setText] = useState("");
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text, delta, tick]);
-
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -51,6 +41,16 @@ export const Banner = () => {
       setDelta(150);
     }
   };
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta]);
 
   return (
     <section className="banner" id="about">
