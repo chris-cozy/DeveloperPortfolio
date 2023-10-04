@@ -17,7 +17,6 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
       <MouseTracker />
     </div>
   );

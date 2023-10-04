@@ -4,6 +4,7 @@ import headerImg from "../assets/img/mina_amongus.png";
 import { useState, useEffect } from "react";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import "./Banner.css";
 
 export const Banner = () => {
   // Animation Setup

@@ -3,24 +3,27 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import "./Projects.css";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Kirs",
-      description: "Lorem ipsum",
+      title: "Trucker Track",
+      description: "Coming Soon",
       imgUrl: projImg1,
+      link: "https://github.com/chris-cozy/TruckerApp",
     },
     {
-      title: "Kurse",
-      description: "Lorem ipsum",
+      title: "Persona Talk",
+      description: "Coming Soon",
       imgUrl: projImg2,
+      link: "https://github.com/chris-cozy/PersonaTalk",
     },
     {
-      title: "Cures",
-      description: "Lorem ipsum",
+      title: "Kibbi Companion",
+      description: "Coming Soon",
       imgUrl: projImg3,
+      link: "https://top.gg/bot/1095193298425094204?s=0cec12cf392f0",
     },
   ];
 

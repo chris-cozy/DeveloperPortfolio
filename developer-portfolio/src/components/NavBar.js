@@ -4,6 +4,7 @@ import logo from "../assets/img/amongus_baby.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import "./NavBar.css";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -31,7 +32,7 @@ export const NavBar = () => {
 
   return (
     // Alter navbar class based on scroll
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="lg" className={` ${scrolled ? "scrolled" : ""}`}>
       <Container>
         <Navbar.Brand href="#about" className="d-flex align-items-center">
           {
@@ -45,10 +46,10 @@ export const NavBar = () => {
           <h2>cozy</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
+          <span className="d-none d-lg-flex navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="d-none d-lg-flex me-auto">
             <Nav.Link
               href="#about"
               className={
@@ -77,7 +78,7 @@ export const NavBar = () => {
               // Projects
             </Nav.Link>
           </Nav>
-          <span className="navbar-text">
+          <span className="d-none d-lg-flex navbar-text">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/chris-sanders-jr/">
                 <img src={navIcon1} alt="linkedIn" />
