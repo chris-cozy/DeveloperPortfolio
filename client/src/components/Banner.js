@@ -16,8 +16,6 @@ export const Banner = () => {
   const [delta, setDelta] = useState(150);
   // Current typed text
   const [text, setText] = useState("");
-  // Time between each word
-  const period = 3000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -27,7 +25,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, delta, tick]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -106,7 +104,7 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5} className="banner-col">
-            {<img src={headerImg} alt="Header Image" />}
+            {<img src={headerImg} alt="Header" />}
           </Col>
         </Row>
       </Container>

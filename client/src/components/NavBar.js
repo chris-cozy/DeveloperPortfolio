@@ -2,7 +2,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import logo from "../assets/img/amongus_baby.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import "./NavBar.css";
 
@@ -57,7 +56,7 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("home")}
             >
-              // About
+              {`// About`}
             </Nav.Link>
             <Nav.Link
               href="#skills"
@@ -66,7 +65,7 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("skills")}
             >
-              // Skills
+              {`// Skills`}
             </Nav.Link>
             <Nav.Link
               href="#projects"
@@ -75,7 +74,7 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("projects")}
             >
-              // Projects
+              {`// Projects`}
             </Nav.Link>
           </Nav>
           <span className="d-none d-lg-flex navbar-text">
