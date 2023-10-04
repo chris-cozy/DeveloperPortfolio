@@ -3,7 +3,16 @@
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 24px;
+    width: 100%;
+    height: 300px;
   }
+
+  .proj-imgbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
   .proj-imgbx::before {
     content: "";
     background: linear-gradient(90.21deg, #d3ab33 -5.91%, #d3ab33 111.58%);

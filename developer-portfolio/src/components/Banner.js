@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/mina_amongus.png";
+import headerImg from "../assets/img/amogus_black_cat.png";
 import { useState, useEffect } from "react";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -80,7 +79,7 @@ export const Banner = () => {
                     I build software, and find pure bliss in the digital sandbox
                     of coding. Software development is an art form, a bridge
                     between imagination and reality, constructured with elegant
-                    and functional solutions. With a strong foundation and
+                    and functional solutions. With a strong foundation in
                     backend development, growing experience in frontend
                     development, and knowledge in many computer science
                     specializations, I walk that bridge daily. Whether I'm
