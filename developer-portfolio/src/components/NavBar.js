@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/amongus_baby.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -33,8 +33,16 @@ export const NavBar = () => {
     // Alter navbar class based on scroll
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
-          <img src={logo} alt="Logo" />
+        <Navbar.Brand href="#about" className="d-flex align-items-center">
+          {
+            <img
+              src={logo}
+              alt="Logo"
+              className="mr-2"
+              style={{ height: "80px", width: "80px" }}
+            />
+          }
+          <h2>cozy</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -42,13 +50,13 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#home"
+              href="#about"
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("home")}
             >
-              Home
+              // About
             </Nav.Link>
             <Nav.Link
               href="#skills"
@@ -57,7 +65,7 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("skills")}
             >
-              Skills
+              // Skills
             </Nav.Link>
             <Nav.Link
               href="#projects"
@@ -66,25 +74,28 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("projects")}
             >
-              Projects
+              // Projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={navIcon1} alt="instagram" />
+              <a href="https://www.linkedin.com/in/chris-sanders-jr/">
+                <img src={navIcon1} alt="linkedIn" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="linkedIn" />
-              </a>
-              <a href="#">
-                <img src={navIcon3} alt="twitter" />
+              {/*<a href="">
+                <img src={navIcon2} alt="facebook" />
+              </a>*/}
+              <a href="https://www.instagram.com/chriscozy/">
+                <img src={navIcon3} alt="instagram" />
               </a>
             </div>
             <button
               className="vvd"
               onClick={() => {
-                console.log("connect");
+                const connectSection = document.getElementById("connect");
+                if (connectSection) {
+                  connectSection.scrollIntoView({ behavior: "smooth" });
+                }
               }}
             >
               <span>Connect With Me</span>

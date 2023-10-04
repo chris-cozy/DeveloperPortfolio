@@ -25,51 +25,53 @@ export const Projects = () => {
   ];
 
   return (
-    <section>
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p> Noteable projects</p>
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav
-                variant="pills"
-                className="nav-pills mb-5 justify-content-center align-items-center"
-                id="pills-tab"
-                defaultActiveKey="/home"
-              >
-                <Nav.Item className="nav-item">
-                  <Nav.Link className="nav-link" eventKey="first">
-                    One
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Two</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Three</Nav.Link>
-                </Nav.Item>
-              </Nav>
-              <Tab.Content>
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...project} />;
-                    })}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="second">
-                  <Row>Lorum Ipsum</Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-                  <Row>Lorem Ipsum</Row>
-                </Tab.Pane>
-              </Tab.Content>
-            </Tab.Container>
+            <div className="project-bx">
+              <h2>Projects</h2>
+              <p> A few noteable projects I've created.</p>
+              <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Nav
+                  variant="pills"
+                  className="nav-pills mb-5 justify-content-center align-items-center"
+                  id="pills-tab"
+                  defaultActiveKey="/home"
+                >
+                  <Nav.Item className="nav-item">
+                    <Nav.Link className="nav-link" eventKey="first">
+                      01.
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="second">02.</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="third">03.</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+                <Tab.Content>
+                  <Tab.Pane eventKey="first">
+                    <Row>
+                      {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="second">
+                    <Row>Lorum Ipsum</Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="third">
+                    <Row>Lorem Ipsum</Row>
+                  </Tab.Pane>
+                </Tab.Content>
+              </Tab.Container>
+            </div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} />
+      {/*<img className="background-image-right" src={colorSharp2} />*/}
     </section>
   );
 };
