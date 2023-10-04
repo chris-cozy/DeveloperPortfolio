@@ -50,7 +50,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta]);
+  }, [text, delta, loopNum, isDeleting, toRotate]);
 
   return (
     <section className="banner" id="about">
