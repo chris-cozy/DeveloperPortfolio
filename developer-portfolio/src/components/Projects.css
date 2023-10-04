@@ -1,0 +1,102 @@
+@media (max-width: 767px) {
+    .project {
+      min-height: 200px; /* Adjust the value for smaller screens */
+      margin-bottom: 750px; /* Adjust the margin for smaller screens */
+    }
+  }
+  
+  .project {
+    padding: 0px 10px;
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+  }
+  
+  .project-bx{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .project h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    color: #ccd0cf;
+  }
+  
+  .project p {
+    color: #9ba8ab;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+  }
+  
+  .project .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+  }
+  
+  .project .nav.nav-pills .nav-item {
+    width: 33.33333%;
+  }
+  
+  .project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 17px 0;
+    color: #ccd0cf;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+  }
+  .project .nav.nav-pills .nav-link::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background: #ccd0cf;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: 0.3s ease-in-out;
+      border-radius: 0px;
+  }
+  .project .nav.nav-pills .nav-link.active::before {
+      width: 100% !important;
+      
+  }
+  .project .nav.nav-pills .nav-link.active {
+      border: 1px solid rgba(255, 255, 255, 1);
+      color:#121212;
+  }
+  .nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+  }
+  .nav-link#projects-tabs-tab-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+  }
+  
+  .background-image-right {
+    top: 20%;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    right: 0;
+    z-index: -4;
+  }
