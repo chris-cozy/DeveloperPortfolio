@@ -119,9 +119,11 @@ export const Skills = () => {
             <div className="skill-bx">
               <h2>Skills</h2>
               <p>
-                Throughout my time in computer science, I have learned and
-                refined many skills which I use in my work. Here are a few
-                notable tools in my technical toolkit.
+                My journey in computer science has led me to acquire and hone an
+                array of skills that are instrumental in my work. These skills
+                have become a driving force behind my ability to craft
+                innovative solutions and bring ideas to life. Allow me to
+                showcase a few of the noteable tools in my technical arsenal.
               </p>
               <Carousel
                 responsive={responsive}
