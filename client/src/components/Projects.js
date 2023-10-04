@@ -76,7 +76,13 @@ export const Projects = () => {
           <Col>
             <div className="project-bx">
               <h2>Projects</h2>
-              <p> A few noteable projects I've created.</p>
+              <p>
+                {" "}
+                Each of these projects is a testament to my passion for
+                innovation, problem solving, and pushing the boundaries of what
+                is currently possible. Explore this collection of noteable
+                projects that embody my creativity and technical prowess.
+              </p>
               <Tab.Container id="projects-tabs" defaultActiveKey="tab1">
                 <Nav
                   variant="pills"
