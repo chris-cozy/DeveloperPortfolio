@@ -5,11 +5,11 @@ import _ from "lodash";
 export const MouseTracker = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const updateMousePosition = _.throttle((e) => {
-    setPosition({ x: e.clientX, y: e.clientY });
-  }, 40);
-
   useEffect(() => {
+    const updateMousePosition = _.throttle((e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    }, 40);
+
     document.addEventListener("mousemove", updateMousePosition);
 
     return () => {
