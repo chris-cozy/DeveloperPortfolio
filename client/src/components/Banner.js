@@ -17,32 +17,32 @@ export const Banner = () => {
   // Current typed text
   const [text, setText] = useState("");
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-
-    // If word being deleted, updated word is one letter less, otherwise one letter more
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-    if (isDeleting) {
-      setDelta((prevDelta) => 75);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-
-      setDelta(1000);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(150);
-    }
-  };
-
   useEffect(() => {
+    const tick = () => {
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate[i];
+
+      // If word being deleted, updated word is one letter less, otherwise one letter more
+      let updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+      if (isDeleting) {
+        setDelta((prevDelta) => 75);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+
+        setDelta(1000);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setDelta(150);
+      }
+    };
+
     let ticker = setInterval(() => {
       tick();
     }, delta);
