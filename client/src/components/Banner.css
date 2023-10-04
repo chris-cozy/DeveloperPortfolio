@@ -27,6 +27,8 @@
   .banner h1 {
     font-size: 50px;
     font-weight: 700;
+    height: 150px;
+    overflow: hidden;
     letter-spacing: 0.8px;
     line-height: 1;
     margin-bottom: 20px;
