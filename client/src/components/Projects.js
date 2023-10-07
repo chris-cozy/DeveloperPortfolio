@@ -1,7 +1,7 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import truckerTrackImg from "../assets/img/github.jpg";
-import personaTalkImg from "../assets/img/github.jpg";
-import kibbiCompanionImg from "../assets/img/github.jpg";
+import personaTalkImg from "../assets/img/jasmine_persona_bot.png";
+import kibbiCompanionImg from "../assets/img/kibbi_companion.png";
 import { ProjectCard } from "./ProjectCard";
 import "./Projects.css";
 
