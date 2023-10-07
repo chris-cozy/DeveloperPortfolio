@@ -10,9 +10,8 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
             <h4 className="project-title">{title}</h4>
           </a>
 
-          <span>{description}</span>
+          <p className="proj-desc">{description}</p>
           <br />
-          <span></span>
         </div>
       </div>
     </Col>

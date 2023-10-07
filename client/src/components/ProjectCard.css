@@ -52,6 +52,12 @@
     letter-spacing: 0.8px;
   }
 
+  .proj-desc{
+    width: 80% !important;
+    font-size: 15px !important;
+    color: #fff !important;
+  }
+
   .project-link{
     text-decoration: none;
   }

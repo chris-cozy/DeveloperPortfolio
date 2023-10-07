@@ -9,7 +9,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "Trucker Track",
-      description: "A full stack truck driver management web application",
+      description: "A full stack truck driver management web application.",
       imgUrl: truckerTrackImg,
       link: "https://github.com/chris-cozy/TruckerApp",
     },
