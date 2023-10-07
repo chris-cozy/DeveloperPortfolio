@@ -39,7 +39,7 @@ export const Contact = () => {
     );
 
     setButtonText("Send");
-    let result = response.json();
+    let result = await response.json();
     setFormDetails(formInitialDetails);
 
     if (result.code === 200) {
