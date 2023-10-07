@@ -11,6 +11,10 @@ export const ProjectCard = ({ title, description, imgUrl, link }) => {
           </a>
 
           <p className="proj-desc">{description}</p>
+
+          <a href={link} className="travel-btn">
+            Visit
+          </a>
           <br />
         </div>
       </div>
