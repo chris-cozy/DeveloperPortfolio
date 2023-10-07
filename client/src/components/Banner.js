@@ -75,8 +75,8 @@ export const Banner = () => {
                   </h1>
                   <p>
                     I build software, and find bliss playing in the digital
-                    sandbox know as code. Software development is an art form, a
-                    bridge between imagination and reality, constructed with
+                    sandbox known as code. Software development is an art form,
+                    a bridge between imagination and reality, constructed with
                     elegant and functional solutions. With a strong foundation
                     in <b className="bolded">backend development</b> and growing
                     expertise in <b className="bolded">frontend design</b>, I
