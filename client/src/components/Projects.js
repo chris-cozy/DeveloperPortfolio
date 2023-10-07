@@ -1,7 +1,7 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import truckerTrackImg from "../assets/img/github.jpg";
-import personaTalkImg from "../assets/img/jasmine_persona_bot.png";
-import kibbiCompanionImg from "../assets/img/kibbi_companion.png";
+import personaTalkImg from "../assets/img/telegram.jpg";
+import kibbiCompanionImg from "../assets/img/discord.jpg";
 import { ProjectCard } from "./ProjectCard";
 import "./Projects.css";
 
@@ -9,19 +9,21 @@ export const Projects = () => {
   const projects = [
     {
       title: "Trucker Track",
-      description: "Coming Soon",
+      description: "A full stack truck driver management web application.",
       imgUrl: truckerTrackImg,
       link: "https://github.com/chris-cozy/TruckerApp",
     },
     {
       title: "Persona Talk",
-      description: "Coming Soon",
+      description:
+        "An API built for creating and conversing with generative agents and personas. Currently has a telegram bot client, a dedicated web client is in development.",
       imgUrl: personaTalkImg,
       link: "https://github.com/chris-cozy/PersonaTalk",
     },
     {
       title: "Kibbi Companion",
-      description: "Coming Soon",
+      description:
+        "A digital tamagotchi enabling users to adopt and care for a virtual Kirby. Currently has a discord bot client. a dedicated web client is in development. Peak use of 250+ users.",
       imgUrl: kibbiCompanionImg,
       link: "https://top.gg/bot/1095193298425094204?s=0cec12cf392f0",
     },
