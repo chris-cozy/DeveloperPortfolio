@@ -2,16 +2,18 @@ import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import truckerTrackImg from "../assets/img/github.jpg";
 import personaTalkImg from "../assets/img/telegram.jpg";
 import kibbiCompanionImg from "../assets/img/discord.jpg";
+import plantHavenImg from "../assets/img/plant_haven.png";
 import { ProjectCard } from "./ProjectCard";
 import "./Projects.css";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Trucker Track",
-      description: "A full stack truck driver management web application.",
-      imgUrl: truckerTrackImg,
-      link: "https://github.com/chris-cozy/TruckerApp",
+      title: "Plant Haven",
+      description:
+        "A full stack social media web application catered to plant owners and enthusiasts.",
+      imgUrl: plantHavenImg,
+      link: "https://the-plant-haven.netlify.app/",
     },
     {
       title: "Persona Talk",
@@ -26,6 +28,12 @@ export const Projects = () => {
         "A digital tamagotchi enabling users to adopt and care for a virtual Kirby. Currently has a discord bot client. a dedicated web client is in development. Peak use of 250+ users.",
       imgUrl: kibbiCompanionImg,
       link: "https://top.gg/bot/1095193298425094204?s=0cec12cf392f0",
+    },
+    {
+      title: "Trucker Track",
+      description: "A full stack truck driver management web application.",
+      imgUrl: truckerTrackImg,
+      link: "https://github.com/chris-cozy/TruckerApp",
     },
   ];
 
