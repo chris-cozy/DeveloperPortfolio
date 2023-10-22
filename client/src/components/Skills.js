@@ -26,6 +26,11 @@ export const Skills = () => {
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
     },
     {
+      name: "Tailwind CSS",
+      imgUrl:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
+    },
+    {
       name: "Node.js",
       imgUrl:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
