@@ -19,9 +19,9 @@ export const Projects = () => {
     {
       title: "Letter",
       description:
-        "A feature-rich, real-time messaging application (Nearing the end of version 1.0.0 development)",
+        "A feature-rich, real-time messaging application with media capability, online statuses, and more",
       imgUrl: letterImg,
-      link: "https://github.com/chris-cozy/Letter",
+      link: "https://letter-webapp.netlify.app/",
     },
     {
       title: "Kibbi Companion",
