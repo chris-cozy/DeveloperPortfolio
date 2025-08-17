@@ -132,7 +132,7 @@ function Projects() {
   const data = [
     { title: "Cozy’s Improved Cats", href: "https://modrinth.com/mod/cozys-improved-cats", blurb: "Minecraft mod overhauling the cat entity system" },
     { title: "Cozy’s Improved Wolves", href: "https://modrinth.com/mod/cozys-improved-wolves", blurb: "Minecraft mod overhauling the wolf entity system" },
-    { title: "Synthetic Soul", href: "https://github.com/chris-cozy/SyntheticSoulAPI", blurb: "Experimental artificial intelligence framework that simulates humanlike emotions, thinking, and relationships." },
+    { title: "Synthetic Soul", href: "https://syntheticsoul.netlify.app/", blurb: "Experimental artificial intelligence framework that simulates humanlike emotions, thinking, and relationships." },
   ];
   return (
     <div className="grid md:grid-cols-3 gap-5">
