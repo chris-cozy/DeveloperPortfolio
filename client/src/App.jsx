@@ -187,6 +187,54 @@ function Experience() {
 }
 
 function Contact({ sending, sent, onSubmit }) {
+  const EMAIL_ENDPOINT = import.meta.env.VITE_EMAIL_ENDPOINT
+  
+  // Local form state compatible with the old server's expected keys
+  const formInitial = { firstName: "", lastName: "", email: "", phone: "", message: "", name: "" };
+  const [form, setForm] = useState(formInitial);
+  const [status, setStatus] = useState({ ok: false, message: "" });
+
+  function update(k, v) {
+    setForm((f) => ({ ...f, [k]: v }));
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (sending) return;
+    setStatus({ ok: false, message: "" });
+    // Map our single Name field to firstName for server compatibility
+    const payload = {
+      firstName: form.name || form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      phone: form.phone,
+      message: form.message,
+    };
+
+    try {
+      onSubmit(e); // triggers visual transmit animation in parent
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), 15000);
+      const res = await fetch(EMAIL_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json;charset=utf-8" },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      clearTimeout(t);
+      const result = await res.json().catch(() => ({ code: res.ok ? 200 : res.status }));
+      setForm(formInitial);
+      if (result.code === 200) {
+        setStatus({ ok: true, message: "Message sent successfully." });
+      } else {
+        setStatus({ ok: false, message: "Something went wrong. Please try again later." });
+      }
+    } catch (err) {
+      setStatus({ ok: false, message: err.name === "AbortError" ? "Request timed out. Please retry." : "Network error. Check your connection and try again." });
+    }
+  }
+
+
   return (
     <Panel title="Contact">
       <div className="grid md:grid-cols-2 gap-6">
@@ -198,14 +246,17 @@ function Contact({ sending, sent, onSubmit }) {
             Leave a message using the transmitter. Fields are placeholders — wire this to your handler of choice.
           </p>
         </div>
-        <form onSubmit={onSubmit} className="space-y-3">
-          <input className="neon-input" placeholder="Your Name" required />
-          <input className="neon-input" placeholder="Your Email" type="email" required />
-          <textarea className="neon-input min-h-[120px]" placeholder="Your Message" required />
-          <button type="submit" className={`transmit-btn ${sending ? "is-sending" : ""} ${sent ? "is-sent" : ""}`}>
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <input className="neon-input" placeholder="Your Name" value={form.name} onChange={(e) => update("name", e.target.value)} required />
+          <input className="neon-input" placeholder="Your Email" type="email" value={form.email} onChange={(e) => update("email", e.target.value)} required />
+          <textarea className="neon-input min-h-[120px]" placeholder="Your Message" value={form.message} onChange={(e) => update("message", e.target.value)} required />
+          <button type="submit" disabled={sending} className={`transmit-btn ${sending ? "is-sending" : ""} ${sent ? "is-sent" : ""}`}>
             <span className="btn-label">{sent ? "TRANSMITTED" : sending ? "TRANSMITTING…" : "PRESS TO TRANSMIT"}</span>
             <span className="btn-progress" />
           </button>
+          <div aria-live="polite" className={`text-sm mt-2 ${status.message ? "opacity-100" : "opacity-0"} transition-opacity duration-200`}>
+            <span className={`${status.ok ? "text-emerald-300" : "text-red-300"}`}>{status.message || "_"}</span>
+          </div>
         </form>
       </div>
     </Panel>
