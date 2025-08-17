@@ -50,8 +50,8 @@ function Header() {
     <header className="relative z-10">
       <div className="flex items-center gap-3 text-xs text-emerald-300/80 tracking-widest">
         <span className="px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30">Version 1.0</span>
-        <span className="px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30">監視中: 安全のため</span>
-        <span className="px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30">アメリカ製1984</span>
+        <span className="px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30">作成者:居心地の良い</span>
+        <span className="px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30">私はカメが大好きです</span>
       </div>
 
       <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black tracking-tight neon-title">
@@ -108,7 +108,7 @@ function Panel({ title, children }) {
 
 function Skills() {
   const skills = [
-    "JavaScript","C#","Java","React","HTML","CSS", "Bootstrap", "Tailwind", "Node","Express", "C", "PHP", "Python","AWS","MongoDB","MySQL","TypeScript","Docker","GraphQL","CI/CD", "Git", "AWS"
+    "JavaScript","C#","Java","React","HTML","CSS", "Bootstrap", "Tailwind", "Node","Express", "C", "PHP", "Python","AWS","MongoDB","MySQL","TypeScript","Docker","GraphQL","CI/CD", "Git",
   ];
   return (
     <Panel title="Technical Skills">
@@ -121,7 +121,7 @@ function Skills() {
         ))}
       </div>
       <div className="mt-5 text-[11px] text-emerald-300/70 flex items-center gap-3">
-        <span>Capability Index</span>
+        <span>Synchronizing Capability Index</span>
         <ProgressBar width="w-48" />
       </div>
     </Panel>
@@ -144,10 +144,17 @@ function Projects() {
           </div>
           <p className="mt-3 text-sm text-emerald-200/80 leading-relaxed">{p.blurb}</p>
           <div className="mt-4 flex items-center gap-3 text-[10px] text-emerald-300/70">
-            <span>STATUS</span>
-            <div className="h-[6px] w-24 overflow-hidden rounded bg-emerald-500/10">
-              <div className="h-full w-0 bg-emerald-400/80 animate-progress" />
+            <span>CALIBRATING</span>
+            <div className="h-[6px] w-full overflow-hidden rounded bg-emerald-500/10">
+              <div className="h-full w-1/4 animate-[load_3s_linear_infinite] bg-emerald-400/80" />
             </div>
+            <style>{`
+              @keyframes load { 0%{transform:translateX(-100%)} 100%{transform:translateX(400%)} }
+              .glitch { position: relative; text-shadow: 0 0 8px rgba(6,182,212,.65), 0 0 24px rgba(16,185,129,.45); }
+              .glitch:before, .glitch:after { content: attr(data-text); position: absolute; left:0; right:0; }
+              .glitch:before { transform: translate(1px,0); color: rgba(59,130,246,0.8); clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); filter: blur(.5px); }
+              .glitch:after { transform: translate(-1px,0); color: rgba(248,113,113,0.8); clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%); filter: blur(.5px); }
+            `}</style>
           </div>
         </a>
       ))}
@@ -157,8 +164,8 @@ function Projects() {
 
 function Experience() {
   const items = [
-    { company: "STEPS (Science and Technologies for Phosphorus Sustainability)", role: "Software Engineer", period: "2023 – 2024", desc: "[DATA] Designed and developed multiple proprietary internal programs and applications to improve data collection and management. Proactively engaged in extensive client/stakeholder meetings to comprehensively understand system requirements." },
-    { company: "ACA (American Credit Acceptance)", role: "Software Engineer", period: "2024 – 2025", desc: "[DATA] Led the development of a high-value streaming dashboard solution, introducing new technology to the organization with a projected business impact of $150K annually. Successfully completed a document processing application that supported multiple data types, contributing an estimated $350K in annual business value. Maintained and enhanced a critical reporting application, ensuring its continued performance and compatibility with evolving data sources. Proactively monitored and resolved issues to minimize operational disruption, preserving the application’s $150K annual value. " },
+    { company: "STEPS (Science and Technologies for Phosphorus Sustainability)", role: "Software Engineer", period: "2023 – 2024", desc: "[データ] Designed and developed multiple proprietary internal programs and applications to improve data collection and management. Proactively engaged in extensive client/stakeholder meetings to comprehensively understand system requirements." },
+    { company: "ACA (American Credit Acceptance)", role: "Software Engineer", period: "2024 – 2025", desc: "[データ] Led the development of a high-value streaming dashboard solution, introducing new technology to the organization with a projected business impact of $150K annually. Successfully completed a document processing application that supported multiple data types, contributing an estimated $350K in annual business value. Maintained and enhanced a critical reporting application, ensuring its continued performance and compatibility with evolving data sources. Proactively monitored and resolved issues to minimize operational disruption, preserving the application’s $150K annual value. " },
   ];
   return (
     <Panel title="Career Experience">
@@ -208,7 +215,7 @@ function Contact({ sending, sent, onSubmit }) {
 function ProgressBar({ width = "w-32" }) {
   return (
     <div className={`h-[10px] ${width} overflow-hidden rounded bg-emerald-500/10 border border-emerald-400/40`}>
-      <div className="h-full w-0 animate-progress bg-emerald-400/80" />
+        <div className="h-full w-1/4 animate-[load_3s_linear_infinite] bg-emerald-400/80" />
     </div>
   );
 }
