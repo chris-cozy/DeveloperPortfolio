@@ -1,12 +1,15 @@
 {
-  "name": "retro-84-portfolio",
-  "version": "0.0.1",
+  "name": "cozy-developer-portfolio",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version"
   },
   "dependencies": {
     "react": "^18.2.0",
